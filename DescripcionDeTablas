@@ -1,0 +1,24 @@
+Tabla equipos
+  id_eq (int) PrimaryKey
+  nom_eq (varchar(50))
+
+Tabla jugadores
+  id_jugador (int) PrimaryKey
+  id_eq int ForeignKey
+  nombre_jugador (varchar(50))
+  apellido (varchar(50))
+
+Tabla partidos
+  id_partido int PrimaryKey
+  id_eq_local int ForeignKey
+  id_eq_visitante int ForeignKey
+  fecha datetime
+
+Tabla jugadores_x_equipo_x_partido(
+  id_jugador int PrimaryKey,ForeignKey
+  id_partido int PrimaryKey,ForeignKey
+  puntos int
+  rebotes int
+  asistencias int
+  minutos int
+  faltas int
